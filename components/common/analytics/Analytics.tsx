@@ -24,7 +24,7 @@ export const Analytics = () => {
       <VercelAnalytics />
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.NEXT_PUBLIC_GA_TRACKING_ID}`}
       />
       <Script
         id="google-analytics"
@@ -35,7 +35,7 @@ export const Analytics = () => {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 
-                gtag('config', '${env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                gtag('config', '${process.NEXT_PUBLIC_GA_TRACKING_ID}', {
                     page_path: window.location.pathname,
                 });
                 `,

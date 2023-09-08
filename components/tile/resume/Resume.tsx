@@ -9,7 +9,7 @@ import { SOCIALS } from "utils/consts";
 
 import styles from "./socialTile.module.scss";
 
-interface SocialTileProps {
+interface ResumeTileProps {
   readonly social: (typeof SOCIALS)[number]["name"];
 }
 
@@ -17,24 +17,38 @@ const iconVariants = {
   hover: { scale: 1.05 },
 };
 
-export const SocialTile = memo<SocialTileProps>(({ social }) => {
+export const ResumeTile = memo<ResumeTileProps>(({ social }) => {
   const selectedSocial = SOCIALS.find(({ name }) => name === social);
 
   if (!selectedSocial) return null;
 
   const Icon = dynamic(() => import(`public/svg/${selectedSocial.name}.svg`));
-  console.log(Icon);
+
+  const handleDownloadPDF = () => {
+    // Replace 'your-pdf-file.pdf' with the actual URL or file path of your PDF.
+    const pdfFilePath = "/resume.pdf";
+
+    // Create an invisible anchor element and trigger a click event to download the PDF.
+    const anchor = document.createElement("a");
+    anchor.href = pdfFilePath;
+    anchor.download = "idham_resume.pdf"; // Set the desired filename for the downloaded file.
+    anchor.style.display = "none";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
 
   return (
     <motion.a
-      href={selectedSocial.link}
+      onClick={handleDownloadPDF}
       className={styles.tile}
       style={{ backgroundColor: selectedSocial.color }}
       target="_blank"
       rel="noreferrer"
       whileHover="hover"
+      role="button" // Add role="button" for accessibility
     >
-      <span className="sr-only">visit my {social} account</span>
+      <span className="sr-only">Download my {social} resume</span>
       <motion.div
         className={styles.icon}
         variants={iconVariants}
@@ -49,4 +63,4 @@ export const SocialTile = memo<SocialTileProps>(({ social }) => {
   );
 });
 
-SocialTile.displayName = "SocialTile";
+ResumeTile.displayName = "ResumeTile";

@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import NextLink from "next/link";
 
 import { Link } from "components/mdx/link/Link";
-import { env } from "env/client";
 import { useWindowSize } from "hooks/useWindowSize";
 import { useTheme } from "providers/ThemeProvider";
 import Logo from "public/svg/logo.svg";
@@ -12,7 +11,7 @@ import { SOCIALS } from "utils/consts";
 
 import styles from "./footer.module.scss";
 
-const Social = ({ social }: { social: typeof SOCIALS[number] }) => {
+const Social = ({ social }: { social: (typeof SOCIALS)[number] }) => {
   const selectedSocial = SOCIALS.find(({ name }) => name === social.name);
   const { width } = useWindowSize();
   const { theme } = useTheme();
@@ -46,12 +45,10 @@ export const Footer = () => (
     <div className={styles.wrapper}>
       <h4 className={styles.title}>Let&#39;s build something together</h4>
       <p className={styles.description}>
-        Feel free to reach out if you&#39;re looking for a developer, have a
-        question or just want to connect 📭
+        Feel free to reach out if you&#39;re looking for a developer, have a question or just want
+        to connect 📭
       </p>
-      <Link href={`mailto:${env.NEXT_PUBLIC_EMAIL}`}>
-        {env.NEXT_PUBLIC_EMAIL}
-      </Link>
+      <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link>
 
       <div className={styles.links}>
         <NextLink href="/" className={styles.home}>
@@ -65,8 +62,7 @@ export const Footer = () => (
         </div>
       </div>
       <span className={styles.copyright}>
-        &copy; {new Date().getFullYear()} Bartosz Zagrodzki. All rights
-        reserved.
+        &copy; {new Date().getFullYear()} idham. All rights reserved.
       </span>
     </div>
   </footer>

@@ -16,9 +16,7 @@ export const GithubGraph = () => {
         src={theme === "dark" ? GithubGraphDark : GithubGraphLight}
         alt="My Github contributions graph"
       />
-      <figcaption className={styles.caption}>
-        My Github graph looks impressing!
-      </figcaption>
+      <figcaption className={styles.caption}>My Github graph looks impressing!</figcaption>
     </figure>
   );
 };

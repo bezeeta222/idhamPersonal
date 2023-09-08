@@ -42,17 +42,17 @@ const nextConfig = {
     return Promise.resolve([
       {
         source: "/new-post",
-        destination: "/blog/THE_NEWEST_POST_SLUG_HERE",
+        destination: "/blog/learning-programming",
         permanent: false,
       },
       {
         source: "/new",
-        destination: "/blog/THE_NEWEST_POST_SLUG_HERE",
+        destination: "/blog/learning-programming",
         permanent: false,
       },
       {
         source: "/newest-post",
-        destination: "/blog/THE_NEWEST_POST_SLUG_HERE",
+        destination: "/blog/learning-programming",
         permanent: false,
       },
       {

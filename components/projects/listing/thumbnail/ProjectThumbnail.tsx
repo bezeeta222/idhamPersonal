@@ -4,8 +4,6 @@ import Link from "next/link";
 import { memo } from "react";
 
 import { Skeleton } from "components/common/skeleton/Skeleton";
-import { Project } from "types";
-
 import styles from "./projectThumbnail.module.scss";
 
 const imageVariants = {
@@ -14,15 +12,29 @@ const imageVariants = {
   },
 };
 
-interface ProjectThumbnailProps {
-  readonly project: Project;
-  readonly blurredImage?: string | undefined;
-}
+// Define an array of static project data
+const staticProjects = [
+  {
+    slug: "project-1",
+    title: "Project 1",
+    excerpt: "This is the first project.",
+    stack: ["React", "Node.js", "MongoDB"],
+    image: "/path/to/project1.jpg",
+  },
+  {
+    slug: "project-2",
+    title: "Project 2",
+    excerpt: "This is the second project.",
+    stack: ["Vue.js", "Express.js", "MySQL"],
+    image: "/path/to/project2.jpg",
+  },
+  // Add more projects as needed
+];
 
-export const ProjectThumbnail = memo<ProjectThumbnailProps>(
-  ({ project, blurredImage }) => (
-    <Link href={`/projects/${project.slug}`}>
-      <motion.article className={styles.thumbnail} whileHover="hover" layout>
+export const ProjectThumbnail = memo(() => (
+  <Link href={`/projects/${project.slug}`}>
+    {staticProjects.map((project) => (
+      <motion.article className={styles.thumbnail} whileHover="hover" layout key={project.slug}>
         <motion.div
           className={styles.image}
           variants={imageVariants}
@@ -39,22 +51,13 @@ export const ProjectThumbnail = memo<ProjectThumbnailProps>(
           />
         </motion.div>
         <div className={styles.content}>
-          <motion.h2
-            className={styles.title}
-            layoutId={`title-container-${project.slug}`}
-          >
+          <motion.h2 className={styles.title} layoutId={`title-container-${project.slug}`}>
             {project.title}
           </motion.h2>
-          <motion.p
-            className={styles.excerpt}
-            layoutId={`excerpt-container-${project.slug}`}
-          >
+          <motion.p className={styles.excerpt} layoutId={`excerpt-container-${project.slug}`}>
             {project.excerpt}
           </motion.p>
-          <motion.div
-            className={styles.stack}
-            layoutId={`stack-container-${project.slug}`}
-          >
+          <motion.div className={styles.stack} layoutId={`stack-container-${project.slug}`}>
             {project.stack.map((tech) => (
               <div className={styles.tech} key={tech}>
                 {tech}
@@ -63,9 +66,9 @@ export const ProjectThumbnail = memo<ProjectThumbnailProps>(
           </motion.div>
         </div>
       </motion.article>
-    </Link>
-  ),
-);
+    ))}
+  </Link>
+));
 
 export const ProjectThumbnailSkeleton = () => (
   <div className={styles.thumbnail}>

@@ -10,6 +10,7 @@ export interface Position {
   readonly date: string;
   readonly id: number;
   readonly link: string;
+  readonly detail: string;
 }
 
 export interface Skill {

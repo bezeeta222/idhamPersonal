@@ -1,7 +1,8 @@
+// @ts-ignore
+
 import "server-only";
 import { z } from "zod";
 
-import { env } from "env/server";
 import { RESOURCE_TYPE } from "types";
 
 const resultSchema = z
@@ -64,10 +65,10 @@ export const getResourceViews = async (type: RESOURCE_TYPE) => {
 
 export const getResourceViewsBySlug = async (type: RESOURCE_TYPE, slug: string) => {
   try {
-    const response = await fetch(`${env.KV_REST_API_URL}/pipeline`, {
+    const response = await fetch(`${process.KV_REST_API_URL}/pipeline`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${env.KV_REST_API_TOKEN}`,
+        Authorization: `Bearer ${process.KV_REST_API_TOKEN}`,
       },
       body: `[["ZSCORE", "${type}", "${slug}"]]`,
       next: {
@@ -88,10 +89,10 @@ export const getResourceViewsBySlug = async (type: RESOURCE_TYPE, slug: string) 
 };
 
 export const view = (type: RESOURCE_TYPE, slug: string) =>
-  fetch(`${env.KV_REST_API_URL}/pipeline`, {
+  fetch(`${process.env.KV_REST_API_URL}/pipeline`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${env.KV_REST_API_TOKEN}`,
+      Authorization: `Bearer ${process.env.KV_REST_API_TOKEN}`,
     },
     body: `[["ZINCRBY", "${type}", 1, "${slug}"]]`,
   });

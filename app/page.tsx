@@ -4,10 +4,10 @@ import { AboutTile } from "components/tile/about/AboutTile";
 import { LatestPostTile } from "components/tile/latestPost/LatestPostTile";
 import { NewsletterTile } from "components/tile/newsletter/NewsletterTile";
 import { SocialTile } from "components/tile/social/SocialTile";
-import { SpotifyTile } from "components/tile/spotify/SpotifyTile";
 import { ThemeTile } from "components/tile/theme/ThemeTile";
 import { getNewestPosts } from "lib/posts";
 import { getBestProjects } from "lib/projects";
+import { ResumeTile } from "components/tile/resume/Resume";
 
 const Home = () => {
   const [firstProject, secondProject] = getBestProjects();
@@ -19,9 +19,9 @@ const Home = () => {
 
   return (
     <Grid>
-      <SpotifyTile />
+      <ResumeTile social="resume" />
       <AboutTile />
-      <SocialTile social="twitter" />
+      <SocialTile social="whatsapp" />
       <ProjectTile project={firstProject} mockupPosition="right" />
       <ThemeTile />
       <LatestPostTile post={post} />
