@@ -1,7 +1,6 @@
 // import algoliasearch from "algoliasearch";
 // import dayjs from "dayjs";
 
-
 // import { getPublishedPosts, getPostParsedContent } from "../lib/posts";
 // import { getAllProjects, getProjectParsedContent } from "../lib/projects";
 

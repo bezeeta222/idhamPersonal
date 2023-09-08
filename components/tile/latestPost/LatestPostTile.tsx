@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { memo } from "react";
 
 import Arrow from "public/svg/right-top-arrow.svg";

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { zodResolver } from "@hookform/resolvers/zod";
 import clsx from "clsx";
 import { useState, useEffect, memo } from "react";
@@ -7,7 +8,6 @@ import { Input } from "components/common/input/Input";
 import { LoaderRing } from "components/common/loader/LoaderRing";
 import { onPromise } from "utils/functions";
 
-import { sendMail } from "../api/contact";
 import { messageSchema } from "../utils/validation/schema";
 import { Message } from "../utils/validation/types";
 
@@ -27,16 +27,17 @@ export const ContactForm = memo<ContactFormProps>(({ onSent }) => {
   } = useForm<Message>({
     resolver: zodResolver(messageSchema),
   });
-  const [formStatus, setFormStatus] = useState<FormStatus>("pending");
+  const [formStatus] = useState<FormStatus>("pending");
 
-  const onSubmit = handleSubmit(async (message) => {
-    setFormStatus("loading");
-    try {
-      await sendMail(message);
-      setFormStatus("fullfilled");
-    } catch {
-      setFormStatus("rejected");
-    }
+  const onSubmit = handleSubmit(() => {
+    // setFormStatus("loading");
+    // try {
+    //   await sendMail(message);
+    //   setFormStatus("fullfilled");
+    // } catch {
+    //   setFormStatus("rejected");
+    // }
+    console.log("submit");
   });
 
   useEffect(() => {

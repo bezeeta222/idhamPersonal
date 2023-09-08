@@ -5,8 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "next-build": "next build",
-    "build": "./build.sh redirect algolia feed next",
+    "build": "next build",
     "start": "next start",
     "tsc": "tsc --noEmit",
     "algolia": "ts-node ./scripts/algolia.ts",

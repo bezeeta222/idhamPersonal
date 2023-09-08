@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { Link } from "components/mdx/link/Link";
 import { allPositions } from "data/experience";
 import { allFacts } from "data/facts";
 import { allSkills } from "data/skills";
-import { getAllResourcesTotalViews } from "lib/views";
 
 import styles from "./about.module.scss";
 import { Experience } from "./components/experience/Experience";
@@ -11,12 +11,10 @@ import { GithubGraph } from "./components/github/GithubGraph";
 import { Hero } from "./components/hero/Hero";
 import { Skills } from "./components/skills/Skills";
 
-export const About = async () => {
-  const views = await getAllResourcesTotalViews();
-
+export const About = () => {
   return (
     <div className={styles.about}>
-      <Hero views={views} />
+      <Hero />
       <div className={styles.container}>
         <Skills skills={allSkills} />
         <Experience positions={allPositions} />

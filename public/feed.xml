@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>idham portfolio</title>
+        <link>http://undefined</link>
+        <description>Hi, I'm idham - full-stack developer, freelancer, blogger, new technologies enthusiast, enjoy my website!</description>
+        <lastBuildDate>Fri, 08 Sep 2023 14:17:13 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>idham portfolio</generator>
+        <language>en</language>
+        <image>
+            <title>idham portfolio</title>
+            <url>http://undefined/regular-android-icon-192x192.png</url>
+            <link>http://undefined</link>
+        </image>
+        <copyright>2023 idham portfolio</copyright>
+        <atom:link href="http://undefined/feed" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[10 UI/UX tips that you should know - forms]]></title>
+            <link>http://undefined/blog/10-ui-ux-tips-that-you-should-know-forms</link>
+            <guid>10-ui-ux-tips-that-you-should-know-forms</guid>
+            <pubDate>Sat, 19 Mar 2022 16:00:00 GMT</pubDate>
+            <description><![CDATA[Forms allow you to collect valuable information from users, so you should make them as good as possible 📈]]></description>
+            <enclosure url="http://undefined//img/posts/10-ui-ux-tips-that-you-should-know-forms/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Do you know all input types?]]></title>
+            <link>http://undefined/blog/do-you-know-all-input-types</link>
+            <guid>do-you-know-all-input-types</guid>
+            <pubDate>Tue, 19 Jul 2022 16:00:00 GMT</pubDate>
+            <description><![CDATA[It isn't secret knowledge, but can be very useful for your end users. Check yourself! 🚀]]></description>
+            <enclosure url="http://undefined//img/posts/do-you-know-all-input-types/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[How I built my personal website?]]></title>
+            <link>http://undefined/blog/how-i-built-my-personal-website</link>
+            <guid>how-i-built-my-personal-website</guid>
+            <pubDate>Fri, 25 Feb 2022 16:00:00 GMT</pubDate>
+            <description><![CDATA[Which technologies have I used? What made me start a blog? What do I plan on posting here? Answers are here ✨]]></description>
+            <enclosure url="http://undefined//img/posts/how-i-built-my-personal-website/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Learning programming - easy to start, hard to master]]></title>
+            <link>http://undefined/blog/learning-programming</link>
+            <guid>learning-programming</guid>
+            <pubDate>Fri, 20 Jan 2023 16:00:00 GMT</pubDate>
+            <description><![CDATA[There are many myths about programming, we will try to debunk a few. In addition, I'll share you some tips I wanted to hear about when I started 💼]]></description>
+            <enclosure url="http://undefined//img/posts/learning-programming/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[reMarkable 2 - what is it and why you should buy it?]]></title>
+            <link>http://undefined/blog/remarkable-2-what-is-it-and-why-you-should-buy-it</link>
+            <guid>remarkable-2-what-is-it-and-why-you-should-buy-it</guid>
+            <pubDate>Wed, 08 Jun 2022 16:00:00 GMT</pubDate>
+            <description><![CDATA[Productivity is very important in our world, but how to keeps it? Maybe I have a solution... 💡]]></description>
+            <enclosure url="http://undefined//img/posts/remarkable-2-what-is-it-and-why-you-should-buy-it/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Using clipboard in JavaScript]]></title>
+            <link>http://undefined/blog/using-clipboard-in-js</link>
+            <guid>using-clipboard-in-js</guid>
+            <pubDate>Fri, 11 Mar 2022 16:00:00 GMT</pubDate>
+            <description><![CDATA[Each of us likes to copy and paste content. But how to embed this feature directly on website? 📋]]></description>
+            <enclosure url="http://undefined//img/posts/using-clipboard-in-js/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Why you SHOULD use floats in your projects]]></title>
+            <link>http://undefined/blog/why-you-should-use-floats-in-your-projects</link>
+            <guid>why-you-should-use-floats-in-your-projects</guid>
+            <pubDate>Thu, 31 Mar 2022 16:00:00 GMT</pubDate>
+            <description><![CDATA[Flexbox, grid, who's that for? Floats for the win! 🏆]]></description>
+            <enclosure url="http://undefined//img/posts/why-you-should-use-floats-in-your-projects/thumbnail.jpg" length="0" type="image/jpg"/>
+        </item>
+    </channel>
+</rss>

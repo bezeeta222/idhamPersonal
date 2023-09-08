@@ -11,7 +11,6 @@ import { LoaderRing } from "components/common/loader/LoaderRing";
 import IngeniousAvatar from "public/img/avatars/have-an-idea.png";
 import { onPromise } from "utils/functions";
 
-import { subscribeToNewsletter } from "./api/mailer";
 import styles from "./newsletterTile.module.scss";
 import { subscriberSchema } from "./utils/validation/schema";
 import { Subscriber } from "./utils/validation/types";
@@ -28,14 +27,14 @@ export const NewsletterTile = () => {
   });
   const [formStatus, setFormStatus] = useState<FormStatus>("pending");
 
-  const onSubmit = handleSubmit(async ({ email }) => {
+  const onSubmit = handleSubmit(() => {
     setFormStatus("loading");
-    try {
-      await subscribeToNewsletter(email);
-      setFormStatus("fullfilled");
-    } catch {
-      setFormStatus("rejected");
-    }
+    // try {
+    //   await subscribeToNewsletter(email);
+    //   setFormStatus("fullfilled");
+    // } catch {
+    //   setFormStatus("rejected");
+    // }
   });
 
   return (

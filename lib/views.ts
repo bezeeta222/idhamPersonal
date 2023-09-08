@@ -1,5 +1,4 @@
-// @ts-ignore
-
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import "server-only";
 import { z } from "zod";
 
@@ -38,12 +37,12 @@ export const getAllResourcesTotalViews = async () => {
   }
 };
 
-export const getResourceViews = async (type: RESOURCE_TYPE) => {
+export const getResourceViews = async (type: any) => {
   try {
-    const response = await fetch(`${env.KV_REST_API_URL}/pipeline`, {
+    const response = await fetch(`${process.env.KV_REST_API_URL}/pipeline`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${env.KV_REST_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.KV_REST_API_TOKEN}`,
       },
       body: `[["ZRANGE", "${type}", 0, -1, "WITHSCORES"]]`,
       next: {
@@ -63,12 +62,12 @@ export const getResourceViews = async (type: RESOURCE_TYPE) => {
   }
 };
 
-export const getResourceViewsBySlug = async (type: RESOURCE_TYPE, slug: string) => {
+export const getResourceViewsBySlug = async (type: any, slug: any) => {
   try {
-    const response = await fetch(`${process.KV_REST_API_URL}/pipeline`, {
+    const response = await fetch(`${process.env.KV_REST_API_URL}/pipeline`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.KV_REST_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.KV_REST_API_TOKEN}`,
       },
       body: `[["ZSCORE", "${type}", "${slug}"]]`,
       next: {

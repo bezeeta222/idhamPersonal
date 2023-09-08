@@ -2,13 +2,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
-import withPlaiceholder from "@plaiceholder/next";
-import pwa from "next-pwa";
+// import pwa from "next-pwa";
 
-const withPWA = pwa({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-});
+// const withPWA = pwa({
+//   dest: "public",
+//   disable: process.env.NODE_ENV === "development",
+// });
 
 /**
  * @type {import('next').NextConfig}
@@ -81,4 +80,4 @@ const nextConfig = {
   },
 };
 
-export default withPWA(withPlaiceholder(nextConfig));
+export default nextConfig;

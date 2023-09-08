@@ -2,11 +2,10 @@ import Image from "next/image";
 
 import { Link } from "components/mdx/link/Link";
 import Me from "public/img/idham.jpeg";
-import { normalizeViewsCount } from "utils/functions";
 
 import styles from "./hero.module.scss";
 
-export const Hero = ({ views }: { views: number }) => (
+export const Hero = () => (
   <section className={styles.hero}>
     <div className={styles.text}>
       <h2 className={styles.title}>Hi, I&#39;m Idham &nbsp;👋</h2>

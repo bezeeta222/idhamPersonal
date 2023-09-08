@@ -1,0 +1,90 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "idham portfolio",
+    "home_page_url": "http://undefined",
+    "description": "Hi, I'm idham - full-stack developer, freelancer, blogger, new technologies enthusiast, enjoy my website!",
+    "icon": "http://undefined/regular-android-icon-192x192.png",
+    "author": {
+        "name": "idham portfolio",
+        "url": "http://undefined"
+    },
+    "items": [
+        {
+            "id": "10-ui-ux-tips-that-you-should-know-forms",
+            "url": "http://undefined/blog/10-ui-ux-tips-that-you-should-know-forms",
+            "title": "10 UI/UX tips that you should know - forms",
+            "summary": "Forms allow you to collect valuable information from users, so you should make them as good as possible 📈",
+            "image": "http://undefined//img/posts/10-ui-ux-tips-that-you-should-know-forms/thumbnail.jpg",
+            "date_modified": "2022-03-19T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        },
+        {
+            "id": "do-you-know-all-input-types",
+            "url": "http://undefined/blog/do-you-know-all-input-types",
+            "title": "Do you know all input types?",
+            "summary": "It isn't secret knowledge, but can be very useful for your end users. Check yourself! 🚀",
+            "image": "http://undefined//img/posts/do-you-know-all-input-types/thumbnail.jpg",
+            "date_modified": "2022-07-19T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        },
+        {
+            "id": "how-i-built-my-personal-website",
+            "url": "http://undefined/blog/how-i-built-my-personal-website",
+            "title": "How I built my personal website?",
+            "summary": "Which technologies have I used? What made me start a blog? What do I plan on posting here? Answers are here ✨",
+            "image": "http://undefined//img/posts/how-i-built-my-personal-website/thumbnail.jpg",
+            "date_modified": "2022-02-25T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        },
+        {
+            "id": "learning-programming",
+            "url": "http://undefined/blog/learning-programming",
+            "title": "Learning programming - easy to start, hard to master",
+            "summary": "There are many myths about programming, we will try to debunk a few. In addition, I'll share you some tips I wanted to hear about when I started 💼",
+            "image": "http://undefined//img/posts/learning-programming/thumbnail.jpg",
+            "date_modified": "2023-01-20T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        },
+        {
+            "id": "remarkable-2-what-is-it-and-why-you-should-buy-it",
+            "url": "http://undefined/blog/remarkable-2-what-is-it-and-why-you-should-buy-it",
+            "title": "reMarkable 2 - what is it and why you should buy it?",
+            "summary": "Productivity is very important in our world, but how to keeps it? Maybe I have a solution... 💡",
+            "image": "http://undefined//img/posts/remarkable-2-what-is-it-and-why-you-should-buy-it/thumbnail.jpg",
+            "date_modified": "2022-06-08T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        },
+        {
+            "id": "using-clipboard-in-js",
+            "url": "http://undefined/blog/using-clipboard-in-js",
+            "title": "Using clipboard in JavaScript",
+            "summary": "Each of us likes to copy and paste content. But how to embed this feature directly on website? 📋",
+            "image": "http://undefined//img/posts/using-clipboard-in-js/thumbnail.jpg",
+            "date_modified": "2022-03-11T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        },
+        {
+            "id": "why-you-should-use-floats-in-your-projects",
+            "url": "http://undefined/blog/why-you-should-use-floats-in-your-projects",
+            "title": "Why you SHOULD use floats in your projects",
+            "summary": "Flexbox, grid, who's that for? Floats for the win! 🏆",
+            "image": "http://undefined//img/posts/why-you-should-use-floats-in-your-projects/thumbnail.jpg",
+            "date_modified": "2022-03-31T16:00:00.000Z",
+            "author": {
+                "name": "Bartosz Zagrodzki"
+            }
+        }
+    ]
+}

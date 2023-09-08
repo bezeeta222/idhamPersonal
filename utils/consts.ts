@@ -31,11 +31,6 @@ export const SOCIALS = [
     link: `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
   },
   {
-    name: "rss",
-    color: "#ee802f",
-    link: "/feed",
-  },
-  {
     name: "whatsapp",
     color: "#075e54",
     link: "https://api.whatsapp.com/send?phone=60172822871",
